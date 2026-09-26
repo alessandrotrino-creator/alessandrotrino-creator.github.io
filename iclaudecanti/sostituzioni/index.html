@@ -8,7 +8,7 @@
   <script>
     // iclaudecanti ora si trova sull'account della scuola: stessa pagina, stessi parametri (?monitor=…, ?ingresso…, #sostituzioni…)
     (function () {
-      var nuovo = 'https://comprensivoalmese.github.io' + location.pathname + location.search + location.hash;
+      var nuovo = 'https://comprensivoalmese.github.io' + location.pathname.replace(/^\/iclaudecanti/, '/orario') + location.search + location.hash;
       var vai = function () { location.replace(nuovo); };
       // Toglie la vecchia app installata (service worker) da questo indirizzo, poi va al nuovo
       if ('serviceWorker' in navigator) {
@@ -25,11 +25,11 @@
 <body style="font-family: system-ui, sans-serif; max-width: 36rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.5">
   <h1>iclaudecanti si è spostato</h1>
   <p>Il sito ora si trova su
-    <a id="link" href="https://comprensivoalmese.github.io/iclaudecanti/">comprensivoalmese.github.io/iclaudecanti</a>.
+    <a id="link" href="https://comprensivoalmese.github.io/orario/">comprensivoalmese.github.io/orario</a>.
     Tra un attimo ci arrivi da solo; se non succede, tocca il link.</p>
   <p>Se avevi installato l'app, installala di nuovo dal nuovo indirizzo e aggiorna i preferiti.</p>
   <script>
-    document.getElementById('link').href = 'https://comprensivoalmese.github.io' + location.pathname + location.search + location.hash;
+    document.getElementById('link').href = 'https://comprensivoalmese.github.io' + location.pathname.replace(/^\/iclaudecanti/, '/orario') + location.search + location.hash;
   </script>
 </body>
 </html>
