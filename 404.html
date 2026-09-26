@@ -8,13 +8,13 @@
   <script>
     // Qualsiasi vecchio indirizzo di iclaudecanti (manuali, dati, file…) porta alla stessa pagina sul sito della scuola
     if (location.pathname.indexOf('/iclaudecanti') === 0) {
-      location.replace('https://comprensivoalmese.github.io' + location.pathname + location.search + location.hash);
+      location.replace('https://comprensivoalmese.github.io' + location.pathname.replace(/^\/iclaudecanti/, '/orario') + location.search + location.hash);
     }
   </script>
 </head>
 <body style="font-family: system-ui, sans-serif; max-width: 36rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.5">
   <h1>Pagina non trovata</h1>
   <p>Cercavi iclaudecanti? Ora si trova su
-    <a href="https://comprensivoalmese.github.io/iclaudecanti/">comprensivoalmese.github.io/iclaudecanti</a>.</p>
+    <a href="https://comprensivoalmese.github.io/orario/">comprensivoalmese.github.io/orario</a>.</p>
 </body>
 </html>
